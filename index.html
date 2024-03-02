@@ -78,7 +78,7 @@
 <nav>
     <a href="#projects">Projects</a>
     <a href="#about">About</a>
-    <a href="#contact">Contact</a>
+
 </nav>
 
 <section id="projects">
@@ -101,21 +101,21 @@
         </video>
 
         <p><b>问题描述：</b>检测图像有无Splicing类型的篡改，广义上将篡改类型分Splicing、Copy-move、Removal三种，但由于我们重新定义了检测目标，所以这三种都可称为Splicing。如下图所示：</p>
-        <img src="https://pic.imgdb.cn/item/65df4c259f345e8d03fb0bfc.jpg" alt="Project 1" width="500px" height="auto">
+        <img src="https://pic.imgdb.cn/item/65df4c259f345e8d03fb0bfc.jpg?raw=true" alt="Project 1" width="500px" height="auto">
       
         <p><b></b>我们基于图像拼接篡改检测领域的研究现状和对实验结果的分析进而指出了图像篡改区域定义上固有的二义性问题，并提出用无二义性的篡改双边缘解决这一问题，在此基础上优化数据生成方法，利用Poisson Editing技术改善篡改效果，并利用COD10K数据集和自然纹理数据集STex生成自相似性纹理篡改数据。基于分而治之的思想设计双阶段篡改痕迹检测网络来简化问题复杂度，首先得到由篡改双边缘形态学膨胀而来的篡改条带，然后再进一步得到精确的篡改双边缘，设计带容忍度的评价指标进行对比实验和消融实验，通过在多个公开数据集进行F1、Precision、Recall、Accuracy四个指标的实验对比和可视化效果对比证明我们的算法在多个维度超越现有算法。</p>
        <p><b>本文的主要内容：</b></p>
         <ol>
         <li>消除二义性：我们提出明确定义的拼接痕迹作为检测目标，以相邻双边的形式，彻底解决了基于区域的方法遇到的二义性问题。假设有A、B两张图片，将A图中的车辆拼接到B图中，这样既可以说A图篡改了B图，也可以说B图篡改了A图。以往的做法是默认区域小的为篡改区域，但这种方法存在诸多的问题，特别是在超过两张图片的篡改问题中。因此我们将篡改边缘作为检测目标，并进一步提出篡改双边缘。
-            <img src="https://pic.imgdb.cn/item/65df4c259f345e8d03fb0c56.jpg" alt="" >
-            <img src="https://pic.imgdb.cn/item/65df4c269f345e8d03fb0e3d.jpg" alt="" width="500px">
+            <img src="https://pic.imgdb.cn/item/65df4c259f345e8d03fb0c56.jpg?raw=true" alt="" >
+            <img src="https://pic.imgdb.cn/item/65df4c269f345e8d03fb0e3d.jpg?raw=true" alt="" width="500px">
         </li>
         <li>更真实的合成数据：我们提出了一种新的数据集合成方法，它高度模拟真实世界的拼接操作。在我们的数据集上进行训练后，模型的泛化能力和鲁棒性会大大提高。部分样例如下图所示：
-            <img src="https://pic.imgdb.cn/item/65df4c319f345e8d03fb3728.jpg" alt="" width="500px">
+            <img src="https://pic.imgdb.cn/item/65df4c319f345e8d03fb3728.jpg?raw=true" alt="" width="500px">
         </li>
         <li>PDB-Net：引入篡改条带作为过渡目标来解决任务中较为严重的样本不均衡问题，并设计了基于分治策略的并行双分支网络（PDB-Net）来检查双边缘。同时设计了带容忍度参数的评估指标以同基于区域的算法进行实验对比。
-            <img src="https://pic.imgdb.cn/item/65df4c259f345e8d03fb0b98.jpg" alt="" >
-            <img src="https://pic.imgdb.cn/item/65df4c269f345e8d03fb0f6c.jpg" alt="" >
+            <img src="https://pic.imgdb.cn/item/65df4c259f345e8d03fb0b98.jpg?raw=true" alt="" >
+            <img src="https://pic.imgdb.cn/item/65df4c269f345e8d03fb0f6c.jpg?raw=true" alt="" >
         </li>
        </ol>
        <p><a href="https://github.com/MuskAI/forgery-edge-detection">Github仓库链接🔗</a></p>
@@ -138,7 +138,7 @@
         </p>
         <p><b>本文算法：</b>
             在掌纹诊病项目中，我们调研了该领域所有论文，设计了三阶段的技术路线。第一，利用YOLO目标检测算法检测手掌区域。第二，基于MTCNN进行手部关键点检测，并根据关键点之间的关系进行手掌对齐，然后基于关键点进行掌心区域分割。第三，输入分割后的掌心图片，进行18个小类疾病的分类，并利用Grad-CAM算法进行可视化以寻求算法结果和中医理论之间的联系。最后我们利用Django开发后端服务程序，开发微信小程序前端供用户体验。该项目获国创项目经费支持。</p>
-        <img src="https://pic.imgdb.cn/item/65df4c319f345e8d03fb3766.jpg" alt="">
+        <img src="https://pic.imgdb.cn/item/65df4c319f345e8d03fb3766.jpg?raw=true" alt="">
     </div>
 
 
@@ -151,10 +151,10 @@
 
         </p>
         
-        <img src="https://pic.imgdb.cn/item/65df4c319f345e8d03fb381f.jpg" >
+        <img src="https://pic.imgdb.cn/item/65df4c319f345e8d03fb381f.jpg?raw=true" >
 
         <p><b>如下是AI流水线的框架图：</b></p>
-        <img src="https://pic.imgdb.cn/item/65df4c3a9f345e8d03fb5b8b.jpg" alt="" >
+        <img src="https://pic.imgdb.cn/item/65df4c3a9f345e8d03fb5b8b.jpg?raw=true" alt="" >
     </div>
 
     <div class="project">
@@ -162,14 +162,14 @@
         <p><b>项目描述:</b>
             同时在3D目标检测的论文项目我们基于对SECOND为代表的两阶段检测模型分析，使用Topology-aware reconstruction网络希望从二维信息中得到三维信息以替代前人固定铺点的方式，这种方式可以利用更多有效信息，比如在激光雷达扫描到的点云图像中，往往会出现车辆的遮挡问题，通过这种方式我们可以补充被遮挡的部分，我在此项工作中负责点云数据的处理和体素化过程以及3D可视化，设计并训练Refinement network得到最终结果。如图，我需要在整个点云图中根据一阶段检测器的结果找到车辆所在范围，并将周围5*5*5的空间进行体素化，并送入拓扑感知重建网络得到重建点，然后根据一阶段检测器原始点、拓扑重建点、5*5*5范围内的点以及其他信息组成的编码训练Refinement network最终得到输出结果并进行指标计算。
         </p>
-        <img src="https://pic.imgdb.cn/item/65df4c319f345e8d03fb387a.jpg" alt="图片1">
+        <img src="https://pic.imgdb.cn/item/65df4c319f345e8d03fb387a.jpg?raw=true" alt="图片1">
         <!-- 图片容器 -->
 <div class="image-container">
     <!-- 第一张图片 -->
     
     <!-- 第二张图片 -->
-    <img src="https://pic.imgdb.cn/item/65df4c319f345e8d03fb38b7.jpg" alt="图片2">
-    <img src="https://pic.imgdb.cn/item/65df4c3a9f345e8d03fb5b22.jpg" alt="图片3">
+    <img src="https://pic.imgdb.cn/item/65df4c319f345e8d03fb38b7.jpg?raw=true" alt="图片2">
+    <img src="https://pic.imgdb.cn/item/65df4c3a9f345e8d03fb5b22.jpg?raw=true" alt="图片3">
 </div>
     </div>
   
@@ -178,12 +178,17 @@
 
 <section id="about">
     <h2>About Me</h2>
-    <p>This is where you can write about yourself and your interests.</p>
-</section>
-
-<section id="contact">
-    <h2>Contact Me</h2>
-    <p>You can reach me at example@example.com</p>
+    <div>
+        <p>👋 你好！我是陈浩然（二十二画生），一名热爱技术和商业的热血青年</p>
+        <p>💡 我热爱技术，本科期间加入导师实验室进行科研锻炼，研究图像篡改检测领域和其他深度学习算法，作为CV算法实习生完整交付客户AI系列产品</p>
+        <p>🎓 作为班长、班助、中共党员、实验室大组长等积极组织和参与各项活动，加入第二学院学习商科知识</p>
+        <p>🎯 进行过一些小小的创业尝试：和朋友一起做产品（企团团、无铭AI）、承包学校食堂的10台自动贩卖机</p>
+        <p>📝 我喜欢发表自己的观点，常在我的知乎上分享我的思考和见解。</p>
+        <p>⛺️ 我爱好登山、唱歌、运动、摄影，曾在荒无人烟的山顶露营、也挑战过’夜行百余里，登顶峨眉山‘…… </p>
+        <p>✨ 我认为生活就是一场不断成长和探索的旅程，我愿意不断挑战自我，追求更好的自己。本科期间踩过一些坑，没能领悟’专注‘二字，投稿的论文也没能中稿，很多事情也未能如愿。所以我希望读研，我将专注于一件事情，尽力做到极致，然后赢一次！</p>
+        <p>👍 我喜欢的人有：毛主席、邓小平、苏东坡、李白；马斯克、任正非、乔布斯等</p>
+        <p>🙏 感谢你花时间了解我！</p>
+    </div>
 </section>
 
 </body>
